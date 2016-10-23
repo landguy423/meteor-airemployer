@@ -1,0 +1,71 @@
+<template name = 'admin'>
+  <div id = 'admin'>
+    <div id = 'title'>Users</div>
+    {{#each personlist}}
+
+    {{/each}}
+  </div>
+</template>
+
+<template name = 'home'>
+  {{> content}}
+</template>
+
+<template name = 'content'>
+  <div id = 'content'> 
+    {{> leader}}
+    <div class = 'page1200width'>
+      <div class="ui doubling two column grid">
+        <div class = 'twelve wide column'>
+          {{> postlist}}
+        </div>
+        <div class = 'four wide column'>
+          {{> controls}}
+          {{> connect}}
+          {{> contact}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name = 'leader'>
+  <div id = 'leader'>
+    <div class = 'page600width' id = 'title'>You've finally found it.</div>
+    <div class = 'page600width' id = 'text'>A free place for business owners & entrepreneurs to connect, help & share their knowledge & experience.</div>
+    <div id = 'submitbutton' class = 'clickcreate'>Submit Post</div>
+  </div>
+</template>
+
+<template name = 'subscribepanel'>
+  <div id = 'subscribepanel'>
+    <div id = 'title'>Get weekly updates of the best stuff happening right here!</div>
+    <input type="text" id="inputemail" placeholder="Enter Your email here.">
+    <div id = 'subscribebutton'> Subscribe </div>
+    <div class = 'clear'></div>
+  </div>
+</template>
+
+<template name = 'controls'>
+  <div id = 'controls'>
+    <div id = 'newlink' class = 'clickcreatelink'>Submit a new link</div>
+    <div id = 'newtext' class = 'clickcreatepost'>Submit a text post</div>
+  </div>
+</template>
+
+<template name = 'connect'>
+  <div id = 'connect'>
+    <div id = 'title'>- Connect With Us -</div>
+    <a target="_blank" href="https://www.facebook.com/Air-Entrepreneur-854351298029873/"> <div id = 'facebook'><i class="facebook square icon"></i> Like Us On Facebook</div> </a>
+    <a target="_blank" href="https://www.twitter.com/airentrepreneur"> <div id = 'twitter'><i class="twitter icon"></i> Follow Us On Twitter</div> </a>
+    <a target="_blank" href="https://www.instagram.com/airentrepreneur"> <div id = 'instagram'><i class="instagram icon"></i> Follow Us On Instagram</div> </a>
+  
+  </div>
+</template>
+
+<template name = 'contact'>
+  <div id = 'contact'>
+    <div id = 'brand'></div>
+    <a href="mailto:joe@airentrepreneur.com"> <div id = 'clickhere' class = 'clickcontactus'>Click here to contact us.</div> </a>
+  </div>
+</template>

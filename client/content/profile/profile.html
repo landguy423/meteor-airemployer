@@ -1,0 +1,59 @@
+<template name = 'profilethumbnail'>
+  <div id = 'profilethumbnail'>
+    <div id = 'banner'><div class = 'page1200width'>
+      <div id = 'menu1'>
+        {{#if showadmin}}<a href="{{pathFor 'admin'}}"> <div style = 'display: none; margin-left: 11px; margin-right: 0px; float: left;' class = 'button' id = 'admin'><i class="spy icon"></i> Admin</div> </a>{{/if}}
+        {{#if showban}}<div style = 'margin-left: 11px; margin-right: 0px; float: left;' class = 'button {{isbanned}}' id = 'ban'><i class="ban icon"></i> {{#unless isbanned}} Ban {{else}} Unban {{/unless}} {{firstname}}</div>{{/if}}
+        {{#if showedit}}<div class = 'button' id = 'edit'><i class="setting icon"></i> Edit</div>{{/if}}
+        {{#if isbanned}}<div class = 'button true' id = 'edit'><i class="ban icon"></i> Banned</div>{{/if}}
+        <div class = 'clear'></div>
+      </div>
+      <div id = 'picture' style = 'background-image: url({{picture}});'></div>
+      <div id = 'name'>{{firstname}} {{lastname}}</div>
+    </div></div>
+  </div>
+</template>
+
+<template name = 'profile'>
+  <div id = 'profile'>
+    {{> profilethumbnail}}
+    
+    <div id = 'menu2'><div class = 'page1200width'>
+      <div id = 'defaultactive' class = 'tab {{defaultactive}}'>My Post</div>
+      <div id = 'favoritesactive' class = 'tab {{favoritesactive}}'>Favorites</div>
+      <div class = 'clear'></div>
+    </div></div>
+
+    <div class = 'page1200width'>
+      <div class="ui doubling two column grid">
+        <div class = 'twelve wide column'>
+          {{#if defaultactive}} {{> profilepost}} {{/if}}
+          {{#if favoritesactive}} {{> profilefavorite}} {{/if}}
+        </div>
+        <div class = 'four wide column'>
+          {{> controls}}
+          {{> connect}}
+          {{> contact}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name = 'profilepost'>
+  <div id = 'postlist'>
+    <div id = 'title'>My Post</div>
+    <div id = 'sort'>sort by - <b>{{sort}}</b></div>
+    <div class = 'clear'></div>
+    {{#each list}} {{> postthumbnail}} {{/each}}
+  </div>
+</template>
+
+<template name = 'profilefavorite'>
+  <div id = 'postlist'>
+    <div id = 'title'>Favorites</div>
+    <div id = 'sort'>sort by - <b>{{sort}}</b></div>
+    <div class = 'clear'></div>
+    {{#each list}} {{#with post}} {{> postthumbnail}} {{/with}} {{/each}}
+  </div>
+</template>

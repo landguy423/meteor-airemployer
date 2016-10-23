@@ -1,0 +1,245 @@
+/* CSS declarations go here */
+
+
+#content {
+	padding-top: 75px;
+}
+#leader {
+	background-color: #ecfbfe;
+	background-image: url('/resources/backgroundpattern.png');
+	background-position: center;
+
+	border-bottom: 4px solid #79d1ef;
+
+	padding-top: 62px;
+	padding-bottom: 63px;
+}
+#leader #title {
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 29px;
+	line-height: 27px;
+	color: #283e57;
+}
+#leader #text {
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 19px;
+	line-height: 27px;
+	color: #283e57;
+
+	margin-top: 37px;
+}
+#leader #submitbutton {
+	background: #283e57;
+
+	width: 200px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 37px;
+
+	padding: 11px;
+
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1px;
+}
+
+#controls {
+	border: 1px solid #eaf0fb;
+	border-radius: 5px;
+
+	padding: 17px;
+
+	margin: 7px;
+	margin-top: 17px;
+}
+#controls #newlink {
+	border-radius: 2px;
+
+	padding: 7px;
+	padding-left: 11px;
+
+	background: #283e57;
+
+	color: white;
+	font-size: 17px; 
+	letter-spacing: 1px;
+	text-align: center;
+}
+#controls #newtext {
+	border-radius: 2px;
+
+	margin-top: 11px;
+
+	padding: 7px;
+	padding-left: 11px;
+
+	background: #36c8e2;
+
+	color: white;
+	font-size: 17px; 
+	letter-spacing: 1px;
+	text-align: center;
+}
+#connect {
+	border: 1px solid #eaf0fb;
+	border-radius: 5px;
+
+	padding: 17px;
+
+	margin: 7px;
+	margin-top: 17px;
+}
+#connect #title {
+	color: #95ddff;
+	letter-spacing: 1px;
+	font-size: 21px;
+	font-weight: bolder;
+	text-align: center;
+
+	padding-bottom: 7px;
+}
+#connect #facebook {
+	border-radius: 2px;
+
+	margin-top: 7px;
+
+	padding: 7px;
+	padding-left: 11px;
+
+	background: #3d63c7;
+
+	color: white;
+	font-size: 11px; 
+	letter-spacing: 1px;
+}
+#connect #instagram {
+	border-radius: 2px;
+
+	margin-top: 7px;
+
+	padding: 7px;
+	padding-left: 11px;
+
+	background: #9e35b5;
+
+	color: white;
+	font-size: 11px; 
+	letter-spacing: 1px;
+}
+#connect #twitter {
+	border-radius: 2px;
+
+	margin-top: 7px;
+
+	padding: 7px;
+	padding-left: 11px;
+
+	background: #2abdff;
+
+	color: white;
+	font-size: 11px; 
+	letter-spacing: 1px;
+}
+#contact {
+	display: none;
+
+	padding-top: calc(35% - 25px);
+	padding-bottom: calc(35% - 15px);
+
+	margin: 7px;
+	margin-top: 17px;
+
+	border: 5px solid #283e57;
+
+	background: url('/resources/icon-white-blue.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#contact #brand {
+	font-size: 31px; 
+	font-weight: bolder;
+	letter-spacing: 1px;
+	text-align: center;
+
+	padding-left: 11px;
+	padding-top: 24px;
+
+	color: white;
+}
+#contact #clickhere {
+	border-radius: 2px;
+
+	padding: 11px;
+
+	background: #283e57;
+
+	color: white;
+	font-size: 13px; 
+	letter-spacing: 1px;
+	text-align: center;
+
+	width: 70%; 
+
+	margin-right: auto; 
+	margin-left: auto;
+}
+
+
+
+#subscribepanel {
+	background: #283e57;
+
+	border-radius: 4px;
+
+	padding: 11px;
+	padding-top: 0px;
+
+	margin-top: 11px;
+}
+#subscribepanel #title {
+	color: white;
+
+	padding: 17px;
+
+	line-height: 27px;
+}
+#subscribepanel #inputemail {
+	float: left;
+
+	height: 35px;
+	line-height: 35px;
+	width: calc(100% - 177px);
+
+	border: none;
+
+	padding-left: 11px;
+	padding-right: 11px;
+
+	margin-right: 7px;
+}
+#subscribepanel #subscribebutton {
+	background: #73daf5;
+
+	float: left;
+
+	color: white; 
+	font-weight: bolder;
+	letter-spacing: 1px;
+	font-size: 17px;
+	text-align: center;
+
+	width: 170px;
+	height: 35px;
+	line-height: 35px;
+
+	padding-left: 17px;
+	padding-right: 17px;
+}
+

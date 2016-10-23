@@ -1,0 +1,73 @@
+#uploadform {
+	cursor: pointer;
+}
+#uploadform #uploadbutton {
+	width: 100%; display: none;
+	padding: 9px; letter-spacing: 1px;
+	text-align: center;
+
+	background: #FFA002; border-radius: 3px;
+	color: white; margin-top: 9px;
+	cursor: pointer; 
+}
+#uploadform #fileinput {
+	-webkit-appearance: none;
+	
+}
+#fileinput, #uploadform {
+	width: 100%; 
+	height: 41px; outline-width: 0;
+}
+#fileinput::-webkit-file-upload-button {
+	visibility: hidden;
+}
+#fileinput::before {
+	content: 'Select File';
+	display: inline-block;
+	background-image: linear-gradient(to left, #283e57, #283e57);
+	width: 100%; 
+	padding: 11px; letter-spacing: 1px;
+	border: none;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer; color: white; 
+	font-size: 12pt; text-align: center;
+}
+#fileinput:hover::before {
+	border-color: black;
+}
+#fileinput:active::before {
+	background-image: linear-gradient(to left, #283e57, #283e57);
+}
+
+#uploadthumbnail {
+	margin-top: 11px;
+	border: 1px solid rgba(32,32,32,0.1);
+	border-radius: 5px;
+	background: white;
+}
+#uploadthumbnail #progress {
+	height: 7px;
+	background: rgba(32,32,32,0.17);
+}
+#uploadthumbnail #progress #bar {
+	height: 7px;
+	background-image: linear-gradient(to left, #283e57, #283e57);
+	-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+#uploadthumbnail #information {
+	float: left;
+	font-size: 14px;
+	letter-spacing: 1px; 
+	padding: 7px; padding-left: 11px;
+}
+#uploadthumbnail #percent {
+	float: right;
+	font-size: 14px;
+	letter-spacing: 1px; 
+	padding: 7px; padding-right: 11px;
+	font-weight: bold; opacity: 0.7;
+}

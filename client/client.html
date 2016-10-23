@@ -1,0 +1,37 @@
+<head>
+	<meta name="fragment" content="!">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link rel="icon" sizes="16x16 32x32" href="/resources/favicon.ico?v=2">
+	
+	<meta name="author" content="Gayle Media Service">
+	<meta name="contact" content="GayleMediaService@gmail.com www.GayleMediaService.com @GayleMediaService ig:GayleMediaService">
+	<meta name="web_author" content="Gayle Media Service">
+</head>
+
+<template name = 'client'>
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW98VB"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PW98VB');</script>
+	<!-- End Google Tag Manager -->
+
+	{{> interfacemeasure}} {{> topbar}}
+
+	{{> share}} {{> customize}}
+
+	<div id = 'client' class = 'infscroll {{personid}}'>
+		
+		<div id = 'wrapyield' style = 'min-height:{{minheight}}px;'> 
+			{{> yield}} 
+		</div>
+		
+		{{> footer}} 
+	
+	</div>
+
+</template>

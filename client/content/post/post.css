@@ -1,0 +1,431 @@
+#postlist {
+  padding: 11px;
+}
+#postlist #title {
+  font-weight: bold;
+  font-size: 23px; float: left;
+  padding: 11px; padding-top: 7px; padding-bottom: 7px; 
+}
+#postlist #sort {
+  letter-spacing: 1px;
+  font-size: 10px; float: right;
+  text-transform: uppercase;
+  border: 1px solid #1b2e5c;
+  padding: 11px; padding-top: 5px; padding-bottom: 5px; 
+  border-radius: 4px; opacity: 0.77;
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+}
+#postlist #sort:hover {
+  opacity: 1;
+}
+#postthumbnail {
+  margin-top: 17px;
+}
+#postthumbnail #left {
+  float: left;
+
+  width: calc(100% - 150px);
+}
+#postthumbnail #rank {
+  float: left;
+
+  padding: 11px;
+  padding-top: 7px;
+
+  color: #1b2e5c;
+}
+#postthumbnail #rank #up {
+  text-align: center;
+}
+#postthumbnail #rank #count {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 19px;
+}
+#postthumbnail #summary {
+  float: left;
+
+  padding: 11px; padding-top: 0px;
+
+  width: calc(100% - 45px);
+}
+#postthumbnail #summary #title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+
+  padding-bottom: 7px; 
+  width: 100%;
+
+  color: #1b2e5c;
+}
+#postthumbnail #summary .spacer {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px; font-size: 9px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+}
+#postthumbnail #summary #archivecomment, #postthumbnail #summary #editcomment, #postthumbnail #summary #addacomment {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+  text-decoration: underline;
+}
+#postthumbnail #summary #timeandauthor {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+}
+#postthumbnail #summary #timeandauthor a {
+  color: #1b2e5c;
+}
+#postthumbnail #summary #linkto {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+  font-weight: bold;
+}
+#postthumbnail #people {
+  float: right;
+}
+#postthumbnail #people #person {
+  float: right;
+
+  width: 21px;
+  height: 21px;
+
+  margin-right: 7px; margin-top: 11px;
+
+  border-radius: 50%;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#postthumbnail #commentcount {
+  float: right;
+
+  font-weight: bolder;
+  padding: 11px;
+
+  color: #1b2e5c;
+}
+@media screen and (max-width: 767px) {
+  #postthumbnail #left {
+    width: 100%;
+  }
+  #postthumbnail #summary .spacer {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+#postpage {
+  padding-top: 75px;
+  margin-top: 17px;
+}
+#postpage #left {
+  float: left;
+
+  width: calc(100% - 150px);
+}
+#postpage #rank {
+  float: left;
+
+  padding-top: 7px;
+
+  color: #1b2e5c;
+
+  width: 60px; text-align: center;
+}
+#postpage #rank #up {
+  text-align: center;
+  font-size: 19px;
+}
+#postpage #rank #count {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 29px;
+}
+#postpage #summary {
+  float: left;
+
+  padding: 11px; padding-top: 0px;
+  padding-left: 0px;
+
+  width: calc(100% - 60px);
+}
+#postpage #summary #title {
+  font-weight: bold;
+  font-size: 37px;
+  line-height: 37px;
+
+  padding-bottom: 14px;
+
+  color: #1b2e5c;
+}
+#postpage #summary #body {
+  font-size: 21px;
+  line-height: 31px;
+  padding-top: 7px;
+
+  color: #1b2e5c;
+}
+#postpage #summary .spacer {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px; font-size: 9px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+}
+#postpage #summary #editcomment, #postpage #summary #addacomment {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+  text-decoration: underline;
+}
+#postpage #summary #timeandauthor {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+}
+#postpage #summary #timeandauthor a {
+  color: #1b2e5c;
+}
+#postpage #summary #linkto {
+  float: left;
+
+  opacity: 0.6;
+
+  padding: 7px;
+  padding-top: 0px; padding-bottom: 0px;
+
+  color: #1b2e5c;
+  font-weight: bold;
+}
+#postpage #people {
+  float: right;
+}
+#postpage #people #person {
+  float: right;
+
+  width: 21px;
+  height: 21px;
+
+  margin-right: 7px; margin-top: 11px;
+
+  border-radius: 50%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#postpage #commentcount {
+  float: right;
+
+  font-weight: bolder;
+  padding: 11px;
+
+  color: #1b2e5c;
+}
+@media screen and (max-width: 767px) {
+  #postpage #left {
+    width: 100%;
+  }
+  #postpage #summary .spacer {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+#postpage #createcomment {
+  padding-top: 17px;
+  padding-left: 11px; padding-right: 11px;
+}
+#postpage #createcomment #profilepicture {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 27px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#postpage #createcomment #createcommentform {
+  float: right;
+  border-top: 1px solid rgba(32,32,32,0.1);
+  width: calc(100% - 81px);
+  padding-top: 21px;
+}
+#postpage #createcomment #subscribe {
+  float: right; margin-bottom: 11px;
+  padding: 11px; padding-left: 17px; padding-right: 17px;
+  border-radius: 27px; font-size: 13px;
+  border: 1px solid #1b2e5c; color: #1b2e5c; font-weight: bold;
+  letter-spacing: 1px; 
+} 
+#postpage #createcomment #postcomment {
+  float: left; margin-bottom: 11px;
+  padding: 11px; padding-left: 17px; padding-right: 17px;
+  border-radius: 27px; font-size: 13px;
+  background: #1b2e5c; color: white; font-weight: bold;
+  letter-spacing: 1px; margin-right: 11px;
+}
+#commentthumbnail #createcomment #profilepicture {
+  display: none;
+}
+#commentthumbnail #createcomment #createcommentform {
+  float: right;
+  border-top: 1px solid rgba(32,32,32,0.1);
+  width: calc(100%);
+  padding-top: 21px;
+}
+#commentthumbnail #createcomment #subscribe {
+  display: none;
+}
+
+#commentlist {
+  padding: 11px;
+  padding-left: 81px;
+}
+#commentlist #title {
+  font-weight: bold;
+  font-size: 23px; float: left;
+  padding: 11px; padding-top: 7px; padding-bottom: 7px; 
+}
+#commentlist #sort {
+  letter-spacing: 1px;
+  font-size: 10px; float: right;
+  text-transform: uppercase;
+  border: 1px solid #1b2e5c;
+  padding: 11px; padding-top: 5px; padding-bottom: 5px; 
+  border-radius: 4px; opacity: 0.77;
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+}
+#commentlist #sort:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  #commentlist {
+    padding: 11px;
+    padding-left: 0px;
+  }
+  #postpage #createcomment #profilepicture {
+    display: none;
+  }
+  #postpage #createcomment #createcommentform {
+    width: 100%;
+  }
+}
+
+#commentthumbnail {
+  
+}
+#commentthumbnail #picture {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#commentthumbnail #information {
+  float: right;
+  border-top: 1px solid rgba(32,32,32,0.1);
+  width: calc(100% - 81px);
+  padding-top: 21px;
+}
+#commentthumbnail #commentthumbnail #picture {
+  width: 50px;
+  height: 50px;
+  margin-top: 27px;
+}
+#commentthumbnail #commentthumbnail #information {
+  width: calc(100% - 61px);
+}
+#commentthumbnail #information #info {
+  padding-bottom: 7px;
+  color: #1b2e5c; opacity: 0.7;
+}
+#commentthumbnail #information #info #name {
+  letter-spacing: 1px; font-size: 15px;  
+  line-height: 24px; font-weight: bold;
+  float: left;
+}
+#commentthumbnail #information #info #spacer {
+  float: left;
+  padding-left: 11px; padding-right: 11px;
+}
+#commentthumbnail #information #info #when {
+  letter-spacing: 1px; font-size: 15px;  
+  line-height: 24px; 
+  float: left;
+}
+#commentthumbnail #information #text {
+  letter-spacing: 1px; font-size: 15px;  
+  line-height: 24px; padding-left: 4px;
+}
+#commentthumbnail #information #actions {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #1b2e5c; opacity: 0.7;
+}
+#commentthumbnail #information #actions .action {
+  float: left; 
+  padding: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 767px) {
+  #commentlist {
+    padding: 11px;
+  }
+  #commentthumbnail #picture {
+    display: none;
+  }
+  #commentthumbnail #information {
+    width: 100%;
+  }
+}

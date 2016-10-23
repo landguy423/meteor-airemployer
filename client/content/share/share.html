@@ -1,0 +1,53 @@
+<template name = 'wysiwyg'>
+  <textarea class = 'wysiwyg' style = 'height: 117px;' type="text" id="inputbody" value="{{body}}"></textarea>
+</template>
+
+<template name = 'share'>
+  <div id = 'share' style = 'top: {{top}}; max-height: calc(100% - {{top}} - 17px);'>
+
+    {{#unless sharelink}} {{#unless sharepost}}<div id = 'sharewhat'>
+      <div id = 'title'>I want to</div>
+      <div class = 'clickcreatepost' id = 'newpost'> <i class="font icon"></i> <br> <b>Create</b> <br>New Post </div>
+      <div class = 'clickcreatelink' id = 'newlink'> <i class="linkify icon"></i> <br> <b>Add</b> <br>New Link </div>
+      <div class = 'clear'></div>
+    </div>{{/unless}} {{/unless}}
+
+    {{#with sharepost}}
+      <div id = 'sharepost'>
+        <div id = 'title'>Share Post <i class="font icon"></i></div>
+        <form class = 'ui form' id = 'sharepostform'>
+
+          <div class = 'field'><label>Title</label> <input required='required' type="text" id="inputtitle" placeholder="air entrepreneur" value = '{{title}}'> </div>
+
+          <div class="field"><label>Body</label> {{> wysiwyg}} </div> 
+
+          <div id = 'archivebutton'> <i class="archive icon"></i> </div>
+          <div id = 'createbutton'> <i class="add icon"></i> Publish </div>
+          <div class = 'clear'></div>
+
+        </form>
+
+      </div>
+    {{/with}}
+
+    {{#with sharelink}}
+      <div id = 'sharelink'>
+        <div id = 'title'>Share Link <i class="linkify icon"></i></div>
+        <form class = 'ui form' id = 'sharelinkform'>
+
+          <div class = 'field'><label>Title</label> <input required='required' type="text" id="inputtitle" placeholder="air entrepreneur" value = '{{title}}'> </div>
+
+          <div class = 'field'><label>Link</label> <input required='required' type="text" id="inputlink" placeholder="http://www.airentrepreneur.com" value = '{{link}}'> </div>
+
+          <div id = 'archivebutton'> <i class="archive icon"></i> </div>
+          <div id = 'createbutton'> <i class="add icon"></i> Publish </div>
+          <div class = 'clear'></div>
+
+        </form>
+
+      </div>
+    {{/with}}
+
+  </div>
+  <div id = 'sharebg' style = 'opacity: {{opacity}}; pointer-events: {{pointer}};'></div>
+</template>

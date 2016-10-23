@@ -1,0 +1,6 @@
+{
+  "fs-extra": "0.30.0",
+  "fs.realpath": "1.0.0",
+  "request": "2.74.0",
+  "dropbox": "0.10.3"
+}

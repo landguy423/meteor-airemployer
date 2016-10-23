@@ -1,0 +1,25 @@
+<template name = 'customize'>
+  <div id = 'customize' style = 'top: {{top}}; max-height: calc(100% - {{top}} - 17px);'>
+
+    {{#with person}}<div id = 'customizepost'>
+      <div id = 'title'> Edit Profile </div>
+      <form class = 'ui form' id = 'customizepostform'>
+
+        {{> profilethumbnail}}
+        <div style = 'height: 11px;'></div>
+        <div class = 'field'><label>Profile Picture</label> {{> uploadprofileimage}} </div>
+        <div class = 'two fields'>
+          <div class = 'field'><label>Firstname</label> <input required='required' type="text" id="inputfirstname" placeholder="air" value = '{{firstname}}'> </div>
+          <div class = 'field'><label>Lastname</label> <input required='required' type="text" id="inputlastname" placeholder="entrepreneur" value = '{{lastname}}'> </div>
+        </div>
+
+        <div id = 'savebutton'> <i class="save icon"></i> Save </div>
+        <div class = 'clear'></div>
+
+      </form>
+
+    </div>{{/with}}
+
+  </div>
+  <div id = 'customizebg' style = 'opacity: {{opacity}}; pointer-events: {{pointer}};'></div>
+</template>

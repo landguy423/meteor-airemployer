@@ -1,0 +1,137 @@
+<template name = 'postlist'>
+  <div id = 'postlist'>
+    <div id = 'title'>Posts</div>
+    <div id = 'sort'>sort by - <b>{{sort}}</b></div>
+    <div class = 'clear'></div>
+    {{> searchpost}}
+    {{#each list}} {{> postthumbnail}} {{/each}}
+    {{> subscribepanel}}
+    {{#each popular}} {{> postthumbnail}} {{/each}}
+  </div>
+</template>
+
+<template name = 'postthumbnail'>
+  <div id = 'postthumbnail'>
+    <div id = 'left'>
+      <div id = 'rank'>
+        <div id = 'up'><i class="caret up icon"></i></div>
+        <div id = 'count'> {{countvote}} </div>
+      </div>
+
+      <div id = 'summary'>
+        <div id = 'title' class = 'truncate'>{{title}}</div>
+        <div class = 'clear'></div>
+        {{#if showadmin}}<div id = 'archivecomment' class = 'clickarchivepost' style = 'float: right; opacity: 0.3; text-decoration: none;'><i class="spy icon"></i> Remove </div>{{/if}}
+        {{#if showedit}}<div id = 'editcomment' class = 'clickeditpost' style = 'text-decoration: none;'><i class="setting icon"></i></div><div class = 'spacer'>• </div>{{/if}}
+        <div id = 'addacomment'>Add a comment</div> <div class = 'invisible768 spacer'> • </div>
+        <div id = 'timeandauthor'>{{fromwhen}} by <a href="{{pathFor 'profile' personid=personid}}"> {{personname}} </a></div> <div class = 'spacer'> {{#if domain}}•{{/if}} </div>
+        <div id = 'linkto'>{{domain}}</div>
+        <div class = 'clear'></div>
+      </div>
+
+      <div class = 'clear'></div>
+    </div>
+
+    <div id = 'commentcount'>{{countcomment}} <i class="comment outline icon"></i></div>
+
+    <div id = 'people'>
+      {{#each persons}}
+        <a href="{{pathFor 'profile' personid=this}}"><div id = 'person' style = 'background-image: url({{picture}});'></div></a>
+      {{/each}}
+    </div>
+
+    <div class = 'clear'></div>
+  </div>
+</template>
+
+<template name = 'postpage'>
+  <div id = 'postpage'>
+    <div class = 'page1200width'>
+      <div id = 'left'>
+        <div id = 'rank'>
+          <div id = 'up'><i class="caret up icon"></i></div>
+          <div id = 'count'> {{countvote}} </div>
+        </div>
+
+        <div id = 'summary'>
+          <div id = 'title'>{{title}}</div>
+          <div class = 'clear'></div>
+          {{#if showadmin}}<div id = 'archivecomment' class = 'clickarchivepost' style = 'float: right; opacity: 0.3; text-decoration: none;'><i class="spy icon"></i> {{#unless archived}} Remove {{else}} Publish {{/unless}} </div>{{/if}}
+          {{#if showedit}}<div id = 'editcomment' class = 'clickeditpost' style = 'text-decoration: none;'><i class="setting icon"></i></div><div class = 'spacer'>• </div>{{/if}}
+          <div id = 'timeandauthor'>{{fromwhen}} by <a href="{{pathFor 'profile' personid=personid}}"> {{personname}} </a></div> <div class = 'spacer'> {{#if domain}}•{{/if}} </div>
+          <div id = 'linkto'>{{domain}}</div>
+          <div class = 'clear'></div>
+          <div id = 'body'>{{{body}}}</div>
+        </div>
+
+        <div class = 'clear'></div>
+      </div>
+
+      <div id = 'commentcount'>{{countcomment}} <i class="comment outline icon"></i></div>
+
+      <div id = 'people'>
+        {{#each persons}}
+          <a href="{{pathFor 'profile' personid=this}}"> <div id = 'person' style = 'background-image: url({{picture}});'></div> </a>
+        {{/each}}
+      </div>
+
+      <div class = 'clear'></div>
+
+      {{> createcomment}}
+      {{#if countcomment}}
+        <div id = 'commentlist'>
+          <div id = 'title'>Comments</div>
+          <div id = 'sort'>sort by - <b>{{sort}}</b></div>
+        </div>
+        {{> commentlist}}
+      {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name = 'createcomment'>
+  <div id = 'createcomment'>
+    <div id = 'profilepicture' style = 'background-image: url({{picture}});'></div>
+    <form class = 'ui form' id = 'createcommentform'>
+
+      <div class="field"><textarea style = 'height: 117px;' type="text" id="inputcomment" placeholder=""></textarea> </div> 
+
+      <div id = 'postcomment'> Post Comment </div>
+      <!-- <div id = 'subscribe'> <i class="add icon"></i> Subscribe to this discussion </div> -->
+      <div class = 'clear'></div>
+
+    </form>
+    <div class = 'clear'></div>
+  </div>
+</template>
+
+<template name = 'commentlist'>{{#if list}}
+  <div id = 'commentlist'>
+    <div class = 'clear' style = 'height: 11px;'></div>
+    {{#each list}} {{> commentthumbnail}} {{/each}}
+  </div>
+{{/if}}</template>
+
+<template name = 'commentthumbnail'>
+  <div id = 'commentthumbnail'>
+    <div id = 'picture' style = 'background-image: url({{picture}});'></div>
+    <div id = 'information'>
+      <div id = 'info'>
+        <a href="{{pathFor 'profile' personid=personid}}"> <div style = 'color: #1b2e5c;' id = 'name'>{{name}}</div> </a>
+        <div id = 'spacer'>•</div>
+        <div id = 'when'>{{fromwhen}}</div>
+        <div class = 'clear'></div>
+      </div>
+      <div id = 'text'>{{{comment}}}</div>
+      <div id = 'actions'>
+        {{#if showedit}} <div style = 'float: right; opacity: 0.4;' class = 'action' id = 'archive'><i class="delete icon"></i> Delete</div> {{else}} {{#if isadmin}} <div style = 'float: right; opacity: 0.4;' class = 'action' id = 'archive'><i class="spy icon"></i> Delete</div> {{/if}} {{/if}}
+        <div class = 'action' id = 'favorite'> {{countvote}} <i class="thumbs up icon"></i> Like</div> 
+        <div class = 'action' id = 'reply'><i class="reply icon"></i> Reply</div> 
+        <div class = 'clear'></div>
+        {{#if showreply}} {{> createcomment}} {{/if}}
+      </div>
+    </div>
+    <div class = 'clear'></div>
+    {{> commentlist}}
+  </div>
+</template>

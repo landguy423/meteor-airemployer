@@ -1,0 +1,87 @@
+<template name = 'topbar'>
+  <div id = 'topbar'> <div class = 'page1200width'>
+    <a href="{{pathFor 'home'}}"> <div id = 'brand'></div> </a>
+    <a href="{{pathFor 'home'}}"> <div id = 'title'>air entrepreneur</div> </a>
+
+    <div id = 'register'>
+      {{#if showregister}}
+        <a href="{{pathFor 'signup'}}"> <div id = 'signup'>Sign up</div> </a>
+        <a href="{{pathFor 'signin'}}"> <div id = 'login'>Log in</div> </a>
+      {{else}}
+        <a href="{{pathFor 'profile' personid=personid}}"> <div id = 'login'>Profile</div> </a>
+      {{/if}}
+      <div class = 'clear'></div>
+    </div>
+    
+    <!-- {{> searchpost}} -->
+
+  </div> </div>
+</template>
+
+<template name = 'searchpost'>
+  <div id = 'search'>
+    <div style = 'padding-left: 7px; padding-right: 7px; margin-bottom: 7px;'>
+        <div id = 'searchinput'>
+          {{> EasySearch.Input class=13 index=searchIndex timeout=777 attributes=searchAttributes }}
+          <div id = 'searchbutton'> <i class="search icon"></i> </div>
+        </div>
+        <div class = 'clear'></div>
+    </div>
+  </div> <div class = 'clear'></div>
+
+  <div class = 'page900width'><div id = 'searchresults'>
+    <div id = 'searchresults' style = 'max-height:{{maxheight}}px;'>
+      {{#EasySearch.IfInputEmpty index=searchIndex }}
+        <div id = '' class = 'NotSearching'></div>
+      {{else}}
+    
+      <div class = 'ui stackable one column <grid'>
+        {{#EasySearch.Each index=searchIndex }}
+          <div class = 'column'> {{> postthumbnail}} </div>
+        {{/EasySearch.Each}}
+      </div>
+
+      {{/EasySearch.IfInputEmpty}}
+
+      {{#EasySearch.IfNoResults index=searchIndex }}
+          <!-- <div id = 'noresult'>No results found.</div> -->
+      {{/EasySearch.IfNoResults}}
+
+      {{#EasySearch.IfSearching index=searchIndex }}
+        <div id = 'searching'><div class="ui active small inline loader"></div></div>
+      {{/EasySearch.IfSearching}}
+    </div>
+  </div></div>
+</template>
+
+<template name = 'searchprofile'>
+  <div id = 'searchprofile'>
+    <div style = 'padding-left: 7px; padding-right: 7px; margin-bottom: 7px;'>
+        <div id = 'searchinput'>
+          {{> EasySearch.Input class=13 index=searchIndex timeout=777 attributes=searchAttributes }}
+          <div id = 'searchbutton'> <i class="search icon"></i> </div>
+        </div>
+        <div class = 'clear'></div>
+
+        <div id = 'searchresults' style = 'max-height:{{maxheight}}px;'>
+            {{#EasySearch.IfInputEmpty index=searchIndex }}
+                <div id = '' class = 'NotSearching'></div>
+            {{else}}
+          <div class = 'ui stackable two column equal width grid'>
+                {{#EasySearch.Each index=searchIndex }}
+              <div class = 'column thin'> {{> profilethumbnail}} </div>
+                {{/EasySearch.Each}}
+          </div>
+            {{/EasySearch.IfInputEmpty}}
+
+            {{#EasySearch.IfNoResults index=searchIndex }}
+                <!-- <div id = 'noresult'>No results found.</div> -->
+            {{/EasySearch.IfNoResults}}
+
+            {{#EasySearch.IfSearching index=searchIndex }}
+                <div id = 'searching'><div class="ui active small inline loader"></div></div>
+            {{/EasySearch.IfSearching}}
+        </div>
+    </div>
+  </div>
+</template>

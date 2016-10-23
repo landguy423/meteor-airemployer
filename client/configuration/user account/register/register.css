@@ -1,0 +1,138 @@
+#signin, #signup {
+  padding: 17px;
+  padding-top: 97px;
+}
+div.at-error.ui.large.icon.error.message > i {
+  font-size: 17px;
+  color: #283e57;
+}
+div.at-error.ui.large.icon.error.message > div {
+  color: #73daf5;
+  text-transform: uppercase;
+}
+#signup > div.ui.large.message, #signin > div.ui.large.message {
+  padding-left: 17px; padding-right: 17px;
+  padding-top: 7px;
+}
+#signup > div.ui.large.message > div.at-signin-link.at-wrap, #signin > div.ui.large.message > div.at-signup-link.at-wrap {
+  font-size: 14px;
+}
+.ui.stacked.segment {
+  box-shadow: none;
+}
+.ui.stacked.segment:after {
+  border-top: none; display: none;
+}
+#signup > div.ui.large.message > div.at-terms-link.at-wrap {
+  display: none;
+}
+#signup > div.at-title > h2, #signin > div.at-title > h2 {
+  text-transform: uppercase;
+  font-size: 17px; letter-spacing: 2px;
+}
+#signup > div.ui.large.message {
+  padding-top: 0px;
+}
+#signup label, #signin label {
+  font-size: 11px;
+}
+#signup > div, #signin > div {
+  background: none;
+  border: none;
+  box-shadow: none;
+  
+  max-width: 700px; margin-left: auto; margin-right: auto;
+}
+#at-facebook, #at-twitter, #signup > div > div.at-sep.ui.horizontal.divider, #signin > div > div.at-sep.ui.horizontal.divider {
+  display: none;
+}
+#signup #at-pwd-form > div > div:nth-child(3) {
+  display: none;
+}
+#signup #at-pwd-form > div > div:nth-child(4) {
+  float: left; width: 49%; clear: none;
+}
+#signup #at-pwd-form > div > div:nth-child(5) {
+  float: right; width: 49%; clear: none;
+}
+#signup > div > div.at-terms-link.at-wrap {
+  margin-top: 17px; font-size: 12px;
+}
+#at-field-username_and_email, #at-field-email, #at-field-password, #at-field-password_again, #at-field-firstname, #at-field-lastname, #at-field-username, #at-field-username_and_email {
+  padding: 7px !important; 
+  padding-left: 11px !important;
+  border-radius: 1px;
+}
+
+#at-btn {
+  background: linear-gradient(to right, #73daf5, #73daf5); 
+  color: white; font-weight: normal; text-transform: uppercase;
+}
+#signin > div > div.at-error.ui.icon.error.message {
+  border: none;
+  -webkit-box-shadow: none;
+
+}
+#signin > div.at-form.ui.large.fluid.form.segment.error {
+  border: none; 
+}
+#signin > div.at-form.ui.large.fluid.form.segment.error > div.at-error.ui.icon.error.message {
+  padding: 7px; border-radius: 0px;
+  padding-left: 17px; padding-right: 17px;
+  border: none; background: #283e57; 
+  
+} #signin > div.at-form.ui.large.fluid.form.segment.error > div.at-error.ui.icon.error.message > div {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px; font-weight: bold; color: white !important;
+} #signin > div.at-form.ui.large.fluid.form.segment.error > div.at-error.ui.icon.error.message > i {
+  font-size: 20px; color: white !important;
+}
+#signin > div > div.at-error.ui.icon.error.message > div > p {
+  color: white;
+}
+#signup a, #signin a {
+  color: #283e57;
+}
+#signin > div > div.at-title, #signup > div > div.at-title {
+  display: none;
+}
+
+
+#accountpopup {
+  z-index: 2;
+  position: fixed;
+  top: 117px;
+  left: calc(50% - 300px);
+  
+  max-width: 100%; width: 600px;
+  background: white;
+  
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.117);
+  -moz-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.117);
+  box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.117);
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+}
+#accountpopupbg {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+}
+
+@media screen and (max-width: 767px) {
+  #accountpopup {
+    left: 17px; width: calc(100% - 34px);
+  }
+}

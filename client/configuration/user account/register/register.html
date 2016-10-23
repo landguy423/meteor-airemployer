@@ -1,0 +1,25 @@
+<template name = 'accountpopup'>
+	<div id = 'accountpopup' style = 'opacity: {{opacity}}; pointer-events: {{pointerevents}};'>
+		{{> registration}}
+	</div> <div id = 'accountpopupbg' style = 'opacity: {{opacity}}; pointer-events: {{pointerevents}};'></div>
+</template>
+
+<template name = 'registration'>
+	<div id = 'registration'>
+		{{#if showsignup}} {{> signup}}
+		{{else}} {{> signin}}
+		{{/if}}
+	</div>
+</template>
+
+<template name = 'signup'>
+  <div id = 'signup'>
+    {{> atForm state = 'signUp'}}
+  </div>
+</template>
+
+<template name = 'signin'>
+  <div id = 'signin'>
+    {{> atForm state = 'signIn'}}
+  </div>
+</template>

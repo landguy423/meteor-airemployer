@@ -1,0 +1,20 @@
+{
+	"galaxy.meteor.com": {
+		"env": {
+			"ROOT_URL": "http://www.airentrepreneur.com",
+			"MONGO_URL": "mongodb://gms739admin:876gms739@candidate.14.mongolayer.com:11083,candidate.19.mongolayer.com:11682/airentrepreneurdata?replicaSet=set-578f0692f10816385b0002ca",
+			"MONGO_OPLOG_URL": "mongodb://gms739admin:876gms739@candidate.14.mongolayer.com:11083,candidate.19.mongolayer.com:11682/local?authSource=airentrepreneurdata&replicaSet=set-578f0692f10816385b0002ca"
+		}
+	},
+	"dropbox": {
+		"key": "bqoi4bxyyjykmx9",
+		"secret": "zz7oqhcnikd4aur",
+		"token": "29Uo5qhFKZYAAAAAAAJlCtQ2B4q50h7xhW2CD_6Bf9pbsrKhF3eufnhs5c51GLA5"
+	},
+    "private": {
+        "MailChimp": {
+            "apiKey": "d1bb69cbd6734ab04ed7940a8250646c-us13",
+            "listId": "7728e12857"
+        }
+    }
+}

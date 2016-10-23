@@ -1,0 +1,20 @@
+<template name="uploadprofileimage"> 
+	<form id = 'uploadform'>
+		<input id="fileinput" type="file" />
+	</form> 
+	
+	{{#with currentUpload}} {{> uploadthumbnail}} {{/with}}
+</template>
+
+<template name = 'uploadthumbnail'>
+	<div id = 'uploadthumbnail'>
+		{{#unless progress.complete}} <div id = 'progress'> <div id = 'bar' style = 'width:{{progress.get}}%;'></div> </div> {{/unless}}
+		<div id = 'information'>{{file.name}}</div>
+		<div id = 'percent'>{{#unless progress.complete}} {{progress.get}}% {{else}} <i class="check icon"></i> {{/unless}}</div>
+		<div class = 'clear'></div>
+	</div>
+</template>
+
+<template name="displayfile">
+	{{#if image}} image: {{image}} {{/if}}
+</template>

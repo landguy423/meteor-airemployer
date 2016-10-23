@@ -1,0 +1,118 @@
+.trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-box {
+  min-height: 117px;
+}
+.trumbowyg-box {
+  margin: 0px; width: 100%;
+}
+#createcomment .trumbowyg-button-pane {
+  display: none;
+}
+#createcomment .trumbowyg-fullscreen-button {
+  display: none !important;
+}
+#createcomment .trumbowyg-editor, #createcomment .trumbowyg-textarea, #createcomment .trumbowyg-box {
+  padding: 7px;
+}
+p {
+  margin-bottom: 3px;
+}
+
+/* CSS declarations go here */
+body {
+  background: white;
+}
+
+* {
+  margin: 0px; padding: 0px;
+}
+
+i.icon {
+  margin: 0px; padding: 0px;
+}
+
+.grid, .grid > .column, .ui.stackable.grid > .column:not(.row) {
+  padding: 0px !important; margin: 0px !important;
+}
+
+.padding3 { padding: 3.5px !important; }
+.padding3l { padding-left: 3.5px !important; } .padding3r { padding-right: 3.5px !important; }
+.padding3t { padding-top: 3.5px !important; } .padding3b { padding-bottom: 3.5px !important; }
+
+.padding7l { padding-left: 7px !important; } .padding7r { padding-right: 7px !important; }
+.padding7t { padding-top: 7px !important; } .padding7b { padding-bottom: 7px !important; }
+
+.padding14l { padding-left: 14px !important; } .padding14r { padding-right: 14px !important; }
+.padding14t { padding-top: 14px !important; } .padding14b { padding-bottom: 14px !important; }
+
+.page600width { margin-left: auto; margin-right: auto; width: 100%; max-width: 600px; }
+.page900width { margin-left: auto; margin-right: auto; width: 100%; max-width: 900px; }
+.page1200width { margin-left: auto; margin-right: auto; width: 100%; max-width: 1200px; }
+.page1280width { margin-left: auto; margin-right: auto; width: 100%; max-width: 1280px; }
+.defaultsidepadding { padding-left: 7px; padding-right: 7px; padding-top: 7px; padding-bottom: 17px; }
+
+.clear {
+  clear: both;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+  background-color: #1eadd3 !important;
+  background: #1eadd3 !important;
+  border: 1px solid #1dbbb7 !important;
+}
+.selectize-control.plugin-remove_button [data-value] .remove {
+  border-left: #1eadd3 !important;
+}
+
+.invisible {
+  display: none;
+}
+.visible768 {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .invisible768 {
+    display: none;
+  }
+  .visible768 {
+    display: block;
+  }
+}
+
+.visible1200 {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .invisible1200 {
+    display: none;
+  }
+  .visible1200 {
+    display: block;
+  }
+}
+
+
+#client {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  
+  width: 100%;
+  height: 100%;
+
+  color: black;
+  background: rgba(0,0,0,0.003);
+  
+  overflow: auto; overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-transition: padding-right 0.5s ease, padding-left 0.5s ease; -moz-transition: padding-right 0.5s ease, padding-left 0.5s ease;
+  -ms-transition: padding-right 0.5s ease, padding-left 0.5s ease; -o-transition: padding-right 0.5s ease, padding-left 0.5s ease;
+  transition: padding-right 0.5s ease, padding-left 0.5s ease;
+}
